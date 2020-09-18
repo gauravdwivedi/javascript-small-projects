@@ -5,24 +5,25 @@
 }
 
 body {
-  
-  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: "Poppins", sans-serif;
+  background-color: rebeccapurple;
   margin: 0;
-  font-size: larger;
   min-height: 100vh;
 }
 
-.btn {
-  background-color: rebeccapurple;
-  color: white;
-  border: none;
-  font-size: 1.2rem;
-  margin: 1rem;
-  font-family: inherit;
-  border-radius: 5px;
-  padding: 1.5rem 3rem;
+#container {
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+  height: 500px;
+  width: 500px;
+  overflow: hidden;
+}
+
+img {
+  transform-origin: center center;
+  object-fit: content;
+  height: 100%;
+  width: 100%;
 }

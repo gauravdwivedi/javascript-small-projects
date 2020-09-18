@@ -1,15 +1,26 @@
-const text =
-  "I should upload many videos on youtube to get started professionally";
+const sounds = ["applause", "boo", "gasp", "tada", "victory", "wrong"];
 
-let index = 0;
+sounds.forEach((sound) => {
+  const btn = document.createElement("button");
+  btn.classList.add("btn");
 
-function writeText() {
-  document.body.innerHTML = text.slice(0, index);
+  // document.body.appendChild(btn);
 
-  index++;
-  if (index > text.length) {
-    index = 0;
-  }
+  btn.innerText = sound;
+
+  btn.addEventListener("click", () => {
+    stopSound();
+    document.getElementById(sound).play();
+  });
+
+  document.body.appendChild(btn);
+});
+
+function stopSound() {
+  sounds.forEach((sound) => {
+    const song = document.getElementById(sound);
+
+    song.pause();
+    song.currentTime = 0;
+  });
 }
-
-setInterval(writeText, 100);
